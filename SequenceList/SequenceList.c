@@ -120,7 +120,7 @@ void printlist(list *l){
 }
 
 int main(){
-    list l;
+    list l; //定义一个名为l的list结构体
     initlist(&l);
     insertlist(&l, 5);
     insertlist(&l, 4);
@@ -136,5 +136,4 @@ int main(){
     modifydatabyindex(&l, 5, 55);
     finddata(&l , 101);
     printlist(&l);
-    free(&l);
 }

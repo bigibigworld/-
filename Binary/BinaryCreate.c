@@ -11,16 +11,16 @@ void createtree(tree ** l){
     printf("请输入节点数值，0代表该节点为空: ");
     int val;
     scanf("%d", &val);
-    if(val = 0){
+    if(val == 0){
         *l = NULL;
         return;
     }
     else{
         tree *node = malloc(sizeof(tree));
         node->data = val;
-        (*l)->data = node;
+        *l = node;
         createtree(&((*l)->left));
-        createtree(&(*l)->right);
+        createtree(&((*l)->right));
     }
 }
 
@@ -28,11 +28,9 @@ void printtree(tree *l){
     if(l == NULL){
         return;
     }
-    else{
-        printf("%d ", l->data);
-        printtree(l->left);
-        printtree(l->right);
-    }
+    printf("%d ", l->data);
+    printtree(l->left);
+    printtree(l->right);
 }
 
 int main(){

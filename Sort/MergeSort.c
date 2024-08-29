@@ -45,6 +45,8 @@ void MergeSort(int * a, int left, int right){
         Merge(a, mid, left, right);
     }
 }
+
+
 int main(){
     int a[] = {9, 6, 8, 10, 3, 8, 10, 89, 6};
     int n = sizeof(a) / sizeof(a[0]) - 1;
